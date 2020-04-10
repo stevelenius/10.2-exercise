@@ -1,0 +1,30 @@
+<!-- index.html for 10.2-exercise (Axios) -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 10.2 Axios</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <h1>Billboard Top Streaming Tracks</h1>
+  <p>Key:<br>
+    <span style="background-color:#0f0">Green</span> = Trending up &uHar;<br>
+    <span style="color: #fff; background-color:#00f">Blue</span> = Same as last week &hoarr;<br>
+    <span style="color: #fff; background-color: #f00">Red</span> = Trending down &dHar;</p>
+
+  <div id="musicApp" class="track-wrapper">
+    <streaming-track v-bind:track="song" v-for="song in tracks">
+    </streaming-track>
+  </div>
+
+  <script src="10.2-exercise.js"></script>
+
+</body>
+</html>
